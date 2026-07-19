@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-// Configuration du middleware CORS pour autoriser les requêtes depuis le frontend
+#Configuration du middleware CORS pour autoriser les requêtes depuis le frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
