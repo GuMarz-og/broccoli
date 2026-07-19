@@ -1,0 +1,6 @@
+# Tous les fichiers texte en LF
+* text=auto eol=lf
+
+# Fichiers Windows qui doivent rester CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
