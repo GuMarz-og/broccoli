@@ -1,0 +1,252 @@
+{
+  "url": "https://example.com",
+
+  "scores": {
+    "accessibility": {
+      "score": 91,
+      "grade": "A"
+    },
+    "greenIT": {
+      "score": 78,
+      "grade": "B"
+    }
+  },
+
+  "summary": {
+    "errors": 3,
+    "warnings": 6,
+    "infos": 12
+  },
+
+  "improvements": [
+    {
+      "id": "RGESN-IMG-01",
+      "source": "RGESN",
+      "title": "Compresser les images",
+      "severity": "critical",
+      "priority": 100,
+      "difficulty": "easy",
+
+      "stats": {
+        "affectedElements": 18
+      },
+
+      "description": "18 images sont plus volumineuses que nécessaire.",
+
+      "recommendation": "Convertir les images en WebP ou AVIF et adapter leur résolution réelle.",
+
+      "benefits": {
+        "accessibility": {
+          "impact": 1,
+          "reason": "Réduit le temps d'attente des utilisateurs avec une connexion lente."
+        },
+        "greenIT": {
+          "impact": 3,
+          "reason": "Réduit le volume de données transférées et la consommation de bande passante."
+        },
+        "performance": {
+          "impact": 3,
+          "reason": "Améliore le temps de chargement des pages."
+        },
+        "seo": {
+          "impact": 2,
+          "reason": "De meilleures performances peuvent améliorer le référencement."
+        }
+      },
+
+      "estimatedGain": {
+        "bandwidth": "-3.2 MB",
+        "requests": 0,
+        "co2": "-1.4 g",
+        "lcp": "-650 ms"
+      },
+
+      "reference": {
+        "standard": "RGESN",
+        "criterion": "Images",
+        "url": "https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/"
+      }
+    },
+
+    {
+      "id": "WCAG-1.1.1",
+      "source": "WCAG",
+      "title": "Ajouter un texte alternatif aux images",
+      "severity": "high",
+      "priority": 95,
+      "difficulty": "easy",
+
+      "stats": {
+        "affectedElements": 12
+      },
+
+      "description": "12 images ne possèdent pas d'attribut alt.",
+
+      "recommendation": "Ajouter un attribut alt décrivant le contenu ou la fonction de chaque image.",
+
+      "benefits": {
+        "accessibility": {
+          "impact": 3,
+          "reason": "Permet aux lecteurs d'écran de restituer le contenu des images."
+        },
+        "greenIT": {
+          "impact": 0,
+          "reason": ""
+        },
+        "performance": {
+          "impact": 0,
+          "reason": ""
+        },
+        "seo": {
+          "impact": 2,
+          "reason": "Les moteurs de recherche comprennent mieux le contenu des images."
+        }
+      },
+
+      "reference": {
+        "standard": "WCAG 2.2",
+        "criterion": "1.1.1",
+        "url": "https://www.w3.org/TR/WCAG22/#non-text-content"
+      }
+    },
+
+    {
+      "id": "RGESN-CACHE-01",
+      "source": "RGESN",
+      "title": "Configurer la mise en cache des ressources",
+      "severity": "medium",
+      "priority": 82,
+      "difficulty": "easy",
+
+      "stats": {
+        "affectedElements": 24
+      },
+
+      "description": "Les ressources statiques ne définissent pas de politique de cache.",
+
+      "recommendation": "Configurer les en-têtes Cache-Control et ETag pour les ressources statiques.",
+
+      "benefits": {
+        "accessibility": {
+          "impact": 1,
+          "reason": "Les utilisateurs bénéficient de temps de chargement réduits lors des visites suivantes."
+        },
+        "greenIT": {
+          "impact": 3,
+          "reason": "Évite le téléchargement inutile de ressources inchangées."
+        },
+        "performance": {
+          "impact": 3,
+          "reason": "Accélère fortement les visites récurrentes."
+        },
+        "seo": {
+          "impact": 1,
+          "reason": "Les performances améliorées peuvent avoir un impact positif sur le référencement."
+        }
+      },
+
+      "estimatedGain": {
+        "bandwidth": "-2.8 MB",
+        "requests": -24,
+        "co2": "-0.9 g"
+      },
+
+      "reference": {
+        "standard": "RGESN",
+        "criterion": "Cache",
+        "url": "https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/"
+      }
+    },
+
+    {
+      "id": "WCAG-1.4.3",
+      "source": "WCAG",
+      "title": "Améliorer le contraste des textes",
+      "severity": "critical",
+      "priority": 90,
+      "difficulty": "medium",
+
+      "stats": {
+        "affectedElements": 9
+      },
+
+      "description": "9 éléments ne respectent pas le contraste minimal recommandé.",
+
+      "recommendation": "Augmenter le contraste entre le texte et l'arrière-plan afin de respecter le niveau AA.",
+
+      "benefits": {
+        "accessibility": {
+          "impact": 3,
+          "reason": "Facilite la lecture pour les personnes malvoyantes."
+        },
+        "greenIT": {
+          "impact": 0,
+          "reason": ""
+        },
+        "performance": {
+          "impact": 0,
+          "reason": ""
+        },
+        "seo": {
+          "impact": 0,
+          "reason": ""
+        }
+      },
+
+      "reference": {
+        "standard": "WCAG 2.2",
+        "criterion": "1.4.3",
+        "url": "https://www.w3.org/TR/WCAG22/#contrast-minimum"
+      }
+    },
+
+    {
+      "id": "RGESN-JS-01",
+      "source": "RGESN",
+      "title": "Réduire le JavaScript inutilisé",
+      "severity": "high",
+      "priority": 88,
+      "difficulty": "hard",
+
+      "stats": {
+        "affectedElements": 7
+      },
+
+      "description": "Environ 420 ko de JavaScript sont téléchargés sans être utilisés.",
+
+      "recommendation": "Supprimer les dépendances inutiles, utiliser le code splitting et charger les modules à la demande.",
+
+      "benefits": {
+        "accessibility": {
+          "impact": 1,
+          "reason": "Une interface plus réactive améliore l'expérience des technologies d'assistance."
+        },
+        "greenIT": {
+          "impact": 3,
+          "reason": "Réduit le volume de données transférées et la consommation énergétique."
+        },
+        "performance": {
+          "impact": 3,
+          "reason": "Réduit le temps de chargement et d'exécution du JavaScript."
+        },
+        "seo": {
+          "impact": 2,
+          "reason": "Les performances sont un facteur pris en compte par les moteurs de recherche."
+        }
+      },
+
+      "estimatedGain": {
+        "bandwidth": "-420 KB",
+        "co2": "-0.4 g",
+        "lcp": "-280 ms",
+        "requests": -3
+      },
+
+      "reference": {
+        "standard": "RGESN",
+        "criterion": "JavaScript",
+        "url": "https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/"
+      }
+    }
+  ]
+}

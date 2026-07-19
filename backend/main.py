@@ -35,7 +35,7 @@ def accueil():
     }
 
 #-----------------------------------------------------------
-# Requête POST pour analyser une URL en utilisant Lighthouse
+# Requête POST pour analyser une URL 
 #-----------------------------------------------------------
 
 
