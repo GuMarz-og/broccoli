@@ -9,13 +9,13 @@ RGESN
 ## 📋 Phase 1 - Conception
 - [x] Définir le concept du projet
 - [x] Définir le JSON d'échange Frontend ↔ Backend
-- [ ] Concevoir la maquette Figma
+- [x] Concevoir la maquette Figma : https://www.figma.com/design/0Cj4XndulDPwsbu72Qf2YA/Broccoli?node-id=0-1&p=f&t=mYWSA13AFzuZNuwb-0 
 
 ---
 
 ## 🎨 Phase 2 - Frontend (React)
-- [ ] Initialiser le projet React (Vite)
-- [ ] Créer l'architecture du projet
+- [x] Initialiser le projet React (Vite)
+- [x] Créer l'architecture du projet
 - [ ] Développer les composants
 - [ ] Utiliser un `mockAnalysis.json`
 - [ ] Finaliser l'interface utilisateur
