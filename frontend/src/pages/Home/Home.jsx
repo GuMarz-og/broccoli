@@ -1,6 +1,6 @@
 import Header from "../../components/Header/Header";
 import Container from "../../components/Container/Container";
-// import UrlForm from "../../components/UrlForm/UrlForm";
+import UrlForm from "../../components/UrlForm/UrlForm";
 
 import "./Home.css";
 
@@ -9,7 +9,7 @@ function Home() {
         <main className="home">
             <Container>
                 <Header />
-                {/* <UrlForm /> */}
+                <UrlForm />
             </Container>
         </main>
     );
