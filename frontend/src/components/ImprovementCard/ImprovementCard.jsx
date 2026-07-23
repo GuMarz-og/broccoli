@@ -1,19 +1,43 @@
+import BenefitItem from "../../components/BenefitItem/BenefitItem";
+
+
 function ImprovementCard({improvement}) {
+
+    const {
+        severity,
+        priority,
+        title,
+        description,
+        recommendation,
+        benefits
+    } = improvement;
+
+    const benefitList = [
+        {label: "Accessibilité", data: benefits.accessibility},
+        {label: "Green IT", data: benefits.greenIT},
+        {label: "Performance", data: benefits.performance},
+        {label: "SEO",  data: benefits.seo}
+    ];
 
     return (
         <article className="improvement-card">
 
             <h2>
-                {improvement.title}   
+                {title}   
             </h2>
 
             <p>
-                {improvement.description} 
+                {description} 
             </p>
 
             <p>
-                {improvement.recommendation}
+                {recommendation}
             </p>
+            {benefitList.map((benefit) => (
+                benefit.data.impact > 0 && (
+                    <BenefitItem key={benefit.label} benefit={benefit} />
+                )
+            ))}
         </article>
     );
 } 
