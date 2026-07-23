@@ -17,7 +17,7 @@ function UrlForm() {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="url">
-                Url du site web :
+                URL du site web
             </label>
 
             <input
