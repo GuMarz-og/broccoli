@@ -1,4 +1,8 @@
-import BenefitItem from "../../components/BenefitItem/BenefitItem";
+import ImprovementRecommendation from "../../components/ImprovementRecommendation/ImprovementRecommendation";
+import ImprovementHeader from "../../components/ImprovementHeader/ImprovementHeader";
+import BenefitsSection from "../../components/BenefitsSection/BenefitsSection";
+import ImprovementEstimatedGain from "../../components/ImprovementEstimatedGain/ImprovementEstimatedGain";
+import ImprovementIndicators from "../../components/ImprovementIndicators/ImprovementIndicators";
 
 
 function ImprovementCard({improvement}) {
@@ -6,10 +10,12 @@ function ImprovementCard({improvement}) {
     const {
         severity,
         priority,
+        difficulty,
         title,
         description,
         recommendation,
-        benefits
+        benefits,
+        estimatedGain
     } = improvement;
 
     const benefitList = [
@@ -21,21 +27,13 @@ function ImprovementCard({improvement}) {
 
     return (
         <article className="improvement-card">
+            
+            <ImprovementIndicators severity={severity} priority={priority} difficulty={difficulty} />
+            <ImprovementHeader title={title} description={description} />
+            <ImprovementRecommendation recommendation={recommendation} />
+            <BenefitsSection benefitList={benefitList} />
+            <ImprovementEstimatedGain estimatedGain={estimatedGain} />
 
-            <h2>
-                {title}   
-            </h2>
-
-            <p>
-                {description} 
-            </p>
-
-            <p>
-                {recommendation}
-            </p>
-            {benefitList.map((benefit) => (
-                <BenefitItem key={benefit.label} benefit={benefit} />
-            ))}
         </article>
     );
 } 

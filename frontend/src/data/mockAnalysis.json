@@ -109,6 +109,13 @@
         }
       },
 
+      "estimatedGain": {
+        "bandwidth": "-420 KB",
+        "co2": "-0.4 g",
+        "lcp": "-280 ms",
+        "requests": -3
+      },
+
       "reference": {
         "standard": "WCAG 2.2",
         "criterion": "1.1.1",
@@ -154,7 +161,8 @@
       "estimatedGain": {
         "bandwidth": "-2.8 MB",
         "requests": -24,
-        "co2": "-0.9 g"
+        "co2": "-0.9 g",
+        "lcp" : "0 ms"
       },
 
       "reference": {
@@ -197,6 +205,13 @@
           "impact": 0,
           "reason": ""
         }
+      },
+
+      "estimatedGain": {
+        "bandwidth": "-420 KB",
+        "co2": "-0.4 g",
+        "lcp": "-280 ms",
+        "requests": -3
       },
 
       "reference": {
