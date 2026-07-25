@@ -2,13 +2,20 @@ import "./BenefitItem.css";
 
 
 function BenefitItem({ benefit }) {
+
+    const { label, data } = benefit;
+
+    if (data.impact <= 0) {
+        return null;
+    }
+
     return (
         <div className="benefit-item">
             <strong>
-                {benefit.label}:
+                {label}:
             </strong>
             <p>
-                {benefit.data.reason}
+                {data.reason}
             </p>
         </div>
     );

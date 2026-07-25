@@ -1,17 +1,17 @@
-function ScoreCard({scoreData}) {
+function ScoreCard({score}) {
 
     return (
         <div>
             <h2>
-                {scoreData.title}   
+                {score.title}   
             </h2>
 
             <p>
-                {scoreData.score} 
+                {score.score} 
             </p>
 
             <p>
-                {scoreData.grade}
+                {score.grade}
             </p>
         </div>
     );

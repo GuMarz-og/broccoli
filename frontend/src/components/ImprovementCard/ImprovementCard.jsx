@@ -34,9 +34,7 @@ function ImprovementCard({improvement}) {
                 {recommendation}
             </p>
             {benefitList.map((benefit) => (
-                benefit.data.impact > 0 && (
-                    <BenefitItem key={benefit.label} benefit={benefit} />
-                )
+                <BenefitItem key={benefit.label} benefit={benefit} />
             ))}
         </article>
     );

@@ -1,16 +1,22 @@
 {
   "url": "https://example.com",
 
-  "scores": {
-    "accessibility": {
-      "score": 91,
-      "grade": "A"
-    },
-    "greenIT": {
-      "score": 78,
-      "grade": "B"
-    }
-  },
+  "scores": [
+      {
+        "id": "accessibility",
+        "title" : "Accéssibilité",
+        "score": 91,
+        "grade": "A",
+        "color": "#4CAF50"
+      },
+      {
+        "id" : "green-it", 
+        "title" : "Éco-conception",
+        "score": 78,
+        "grade": "B",
+        "color": "#22C55E"
+      }
+  ],
 
   "summary": {
     "errors": 3,
