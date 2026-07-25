@@ -1,15 +1,15 @@
 import BenefitItem from "../../components/BenefitItem/BenefitItem";
 
 
-function BenefitsSection({benefitList}) {
+function BenefitsSection({benefits}) {
 
     return (
         <div className="benefits-section">
             <h3>
                 Pourquoi corriger ? 
             </h3>
-            {benefitList.map((benefit) => (
-                <BenefitItem key={benefit.label} benefit={benefit} />
+            {benefits.map((benefit) => (
+                <BenefitItem key={benefit.title} benefit={benefit} />
             ))}
         </div>  
     );

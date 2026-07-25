@@ -26,243 +26,176 @@
 
   "improvements": [
     {
-      "id": "RGESN-IMG-01",
-      "source": "RGESN",
-      "title": "Compresser les images",
-      "severity": "critical",
-      "priority": 100,
-      "difficulty": "easy",
-
-      "stats": {
-        "affectedElements": 18
-      },
-
-      "description": "18 images sont plus volumineuses que nécessaire.",
-
-      "recommendation": "Convertir les images en WebP ou AVIF et adapter leur résolution réelle.",
-
-      "benefits": {
-        "accessibility": {
-          "impact": 1,
-          "reason": "Réduit le temps d'attente des utilisateurs avec une connexion lente."
-        },
-        "greenIT": {
-          "impact": 3,
-          "reason": "Réduit le volume de données transférées et la consommation de bande passante."
-        },
-        "performance": {
-          "impact": 3,
-          "reason": "Améliore le temps de chargement des pages."
-        },
-        "seo": {
-          "impact": 2,
-          "reason": "De meilleures performances peuvent améliorer le référencement."
-        }
-      },
-
-      "estimatedGain": {
-        "bandwidth": "-3.2 MB",
-        "requests": 0,
-        "co2": "-1.4 g",
-        "lcp": "-650 ms"
-      },
-
-      "reference": {
-        "standard": "RGESN",
-        "criterion": "Images",
-        "url": "https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/"
-      }
-    },
-
-    {
       "id": "WCAG-1.1.1",
       "source": "WCAG",
       "title": "Ajouter un texte alternatif aux images",
-      "severity": "high",
+      "severity": {
+        "level": 4,
+        "label": "Élevée"
+      },
       "priority": 95,
-      "difficulty": "easy",
-
+      "difficulty": {
+        "level": 1,
+        "label": "Facile"
+      },
       "stats": {
         "affectedElements": 12
       },
-
       "description": "12 images ne possèdent pas d'attribut alt.",
-
       "recommendation": "Ajouter un attribut alt décrivant le contenu ou la fonction de chaque image.",
-
-      "benefits": {
-        "accessibility": {
+      "benefits": [
+        {
+          "title": "accessibilité",
           "impact": 3,
-          "reason": "Permet aux lecteurs d'écran de restituer le contenu des images."
+          "reason": "Permet aux lecteurs d'écran de restituer correctement le contenu des images."
         },
-        "greenIT": {
-          "impact": 0,
-          "reason": ""
-        },
-        "performance": {
-          "impact": 0,
-          "reason": ""
-        },
-        "seo": {
+        {
+          "title": "SEO",
           "impact": 2,
           "reason": "Les moteurs de recherche comprennent mieux le contenu des images."
         }
-      },
-
+      ],
       "estimatedGain": {
-        "bandwidth": "-420 KB",
-        "co2": "-0.4 g",
-        "lcp": "-280 ms",
-        "requests": -3
+        "bandwidth": {
+          "value": -0.4,
+          "unit": "MB"
+        },
+        "requests": {
+          "value": -3,
+          "unit": "requests"
+        },
+        "co2": {
+          "value": -0.2,
+          "unit": "g"
+        },
+        "lcp": {
+          "value": -120,
+          "unit": "ms"
+        }
       },
-
       "reference": {
         "standard": "WCAG 2.2",
         "criterion": "1.1.1",
         "url": "https://www.w3.org/TR/WCAG22/#non-text-content"
       }
     },
-
     {
       "id": "RGESN-CACHE-01",
       "source": "RGESN",
       "title": "Configurer la mise en cache des ressources",
-      "severity": "medium",
+      "severity": {
+        "level": 3,
+        "label": "Moyenne"
+      },
       "priority": 82,
-      "difficulty": "easy",
-
+      "difficulty": {
+        "level": 2,
+        "label": "Moyenne"
+      },
       "stats": {
         "affectedElements": 24
       },
-
       "description": "Les ressources statiques ne définissent pas de politique de cache.",
-
-      "recommendation": "Configurer les en-têtes Cache-Control et ETag pour les ressources statiques.",
-
-      "benefits": {
-        "accessibility": {
-          "impact": 1,
-          "reason": "Les utilisateurs bénéficient de temps de chargement réduits lors des visites suivantes."
-        },
-        "greenIT": {
+      "recommendation": "Configurer les en-têtes Cache-Control et ETag afin d'éviter le téléchargement inutile des ressources inchangées.",
+      "benefits": [
+        {
+          "title": "éco-conception",
           "impact": 3,
-          "reason": "Évite le téléchargement inutile de ressources inchangées."
+          "reason": "Réduit le trafic réseau et la consommation énergétique lors des visites récurrentes."
         },
-        "performance": {
+        {
+          "title": "performance",
           "impact": 3,
-          "reason": "Accélère fortement les visites récurrentes."
+          "reason": "Accélère considérablement le chargement des pages déjà visitées."
         },
-        "seo": {
+        {
+          "title": "SEO",
           "impact": 1,
-          "reason": "Les performances améliorées peuvent avoir un impact positif sur le référencement."
+          "reason": "De meilleures performances peuvent améliorer le référencement."
+        }
+      ],
+      "estimatedGain": {
+        "bandwidth": {
+          "value": -2.8,
+          "unit": "MB"
+        },
+        "requests": {
+          "value": -24,
+          "unit": "requests"
+        },
+        "co2": {
+          "value": -0.9,
+          "unit": "g"
+        },
+        "lcp": {
+          "value": 0,
+          "unit": "ms"
         }
       },
-
-      "estimatedGain": {
-        "bandwidth": "-2.8 MB",
-        "requests": -24,
-        "co2": "-0.9 g",
-        "lcp" : "0 ms"
-      },
-
       "reference": {
         "standard": "RGESN",
         "criterion": "Cache",
         "url": "https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/"
       }
     },
-
-    {
-      "id": "WCAG-1.4.3",
-      "source": "WCAG",
-      "title": "Améliorer le contraste des textes",
-      "severity": "critical",
-      "priority": 90,
-      "difficulty": "medium",
-
-      "stats": {
-        "affectedElements": 9
-      },
-
-      "description": "9 éléments ne respectent pas le contraste minimal recommandé.",
-
-      "recommendation": "Augmenter le contraste entre le texte et l'arrière-plan afin de respecter le niveau AA.",
-
-      "benefits": {
-        "accessibility": {
-          "impact": 3,
-          "reason": "Facilite la lecture pour les personnes malvoyantes."
-        },
-        "greenIT": {
-          "impact": 0,
-          "reason": ""
-        },
-        "performance": {
-          "impact": 0,
-          "reason": ""
-        },
-        "seo": {
-          "impact": 0,
-          "reason": ""
-        }
-      },
-
-      "estimatedGain": {
-        "bandwidth": "-420 KB",
-        "co2": "-0.4 g",
-        "lcp": "-280 ms",
-        "requests": -3
-      },
-
-      "reference": {
-        "standard": "WCAG 2.2",
-        "criterion": "1.4.3",
-        "url": "https://www.w3.org/TR/WCAG22/#contrast-minimum"
-      }
-    },
-
     {
       "id": "RGESN-JS-01",
       "source": "RGESN",
       "title": "Réduire le JavaScript inutilisé",
-      "severity": "high",
+      "severity": {
+        "level": 4,
+        "label": "Élevée"
+      },
       "priority": 88,
-      "difficulty": "hard",
-
+      "difficulty": {
+        "level": 4,
+        "label": "Difficile"
+      },
       "stats": {
         "affectedElements": 7
       },
-
-      "description": "Environ 420 ko de JavaScript sont téléchargés sans être utilisés.",
-
-      "recommendation": "Supprimer les dépendances inutiles, utiliser le code splitting et charger les modules à la demande.",
-
-      "benefits": {
-        "accessibility": {
+      "description": "Environ 420 ko de JavaScript sont téléchargés sans être exécutés.",
+      "recommendation": "Supprimer les dépendances inutiles, utiliser le code splitting et charger les modules uniquement lorsqu'ils sont nécessaires.",
+      "benefits": [
+        {
+          "title": "accessibilité",
           "impact": 1,
-          "reason": "Une interface plus réactive améliore l'expérience des technologies d'assistance."
+          "reason": "Une interface plus réactive améliore l'expérience des utilisateurs utilisant des technologies d'assistance."
         },
-        "greenIT": {
+        {
+          "title": "éco-conception",
           "impact": 3,
           "reason": "Réduit le volume de données transférées et la consommation énergétique."
         },
-        "performance": {
+        {
+          "title": "performance",
           "impact": 3,
-          "reason": "Réduit le temps de chargement et d'exécution du JavaScript."
+          "reason": "Diminue le temps de téléchargement, de parsing et d'exécution du JavaScript."
         },
-        "seo": {
+        {
+          "title": "SEO",
           "impact": 2,
-          "reason": "Les performances sont un facteur pris en compte par les moteurs de recherche."
+          "reason": "Les moteurs de recherche prennent en compte les performances du site."
+        }
+      ],
+      "estimatedGain": {
+        "bandwidth": {
+          "value": -0.42,
+          "unit": "MB"
+        },
+        "requests": {
+          "value": -3,
+          "unit": "requests"
+        },
+        "co2": {
+          "value": -0.4,
+          "unit": "g"
+        },
+        "lcp": {
+          "value": -280,
+          "unit": "ms"
         }
       },
-
-      "estimatedGain": {
-        "bandwidth": "-420 KB",
-        "co2": "-0.4 g",
-        "lcp": "-280 ms",
-        "requests": -3
-      },
-
       "reference": {
         "standard": "RGESN",
         "criterion": "JavaScript",

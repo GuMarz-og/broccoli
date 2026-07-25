@@ -3,19 +3,19 @@ import "./BenefitItem.css";
 
 function BenefitItem({ benefit }) {
 
-    const { label, data } = benefit;
+    const { title, reason, impact } = benefit;
 
-    if (data.impact <= 0) {
+    if (impact <= 0) {
         return null;
     }
 
     return (
         <div className="benefit-item">
             <strong>
-                {label}:
+                {title}:
             </strong>
             <p>
-                {data.reason}
+                {reason}
             </p>
         </div>
     );

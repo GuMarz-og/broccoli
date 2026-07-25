@@ -2,11 +2,11 @@ function ImprovementIndicators({severity, priority, difficulty}) {
 
     return (
             <div className="improvement-indicators">
-                <span className={`severity severity-${severity}`}>
-                    {severity}
+                <span className={`severity severity-${severity.level}`}>
+                    {severity.label}
                 </span>
-                <span className={`difficulty difficulty-${difficulty}`}>
-                    {difficulty}
+                <span className={`difficulty difficulty-${difficulty.level}`}>
+                    {difficulty.label}
                 </span>
                 <span className={`priority priority-${priority}`}>
                     {priority}

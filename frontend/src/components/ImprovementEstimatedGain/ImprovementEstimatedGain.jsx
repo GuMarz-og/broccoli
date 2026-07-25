@@ -14,16 +14,16 @@ function ImprovementEstimatedGain({estimatedGain}) {
             </h3>
             <ul>
                 <li>
-                    <span className="gain-label">Bande passante :</span> {bandwidth}
+                    <span className="gain-label">Bande passante :</span> {bandwidth.value} {bandwidth.unit}
                 </li>
                 <li>
-                    <span className="gain-label">Requêtes :</span> {requests}
+                    <span className="gain-label">Requêtes :</span> {requests.value} {requests.unit}
                 </li>
                 <li>
-                    <span className="gain-label">CO2 :</span> {co2}
+                    <span className="gain-label">CO2 :</span> {co2.value} {co2.unit}
                 </li>
                 <li>
-                    <span className="gain-label">LCP :</span> {lcp}
+                    <span className="gain-label">LCP :</span> {lcp.value} {lcp.unit}
                 </li>
             </ul>
         </div>

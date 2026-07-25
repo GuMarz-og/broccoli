@@ -18,12 +18,12 @@ function ImprovementCard({improvement}) {
         estimatedGain
     } = improvement;
 
-    const benefitList = [
-        {label: "Accessibilité", data: benefits.accessibility},
-        {label: "Green IT", data: benefits.greenIT},
-        {label: "Performance", data: benefits.performance},
-        {label: "SEO",  data: benefits.seo}
-    ];
+    // const benefitList = [
+    //     {label: "Accessibilité", data: benefits.accessibility},
+    //     {label: "Green IT", data: benefits.greenIT},
+    //     {label: "Performance", data: benefits.performance},
+    //     {label: "SEO",  data: benefits.seo}
+    // ];
 
     return (
         <article className="improvement-card">
@@ -31,7 +31,7 @@ function ImprovementCard({improvement}) {
             <ImprovementIndicators severity={severity} priority={priority} difficulty={difficulty} />
             <ImprovementHeader title={title} description={description} />
             <ImprovementRecommendation recommendation={recommendation} />
-            <BenefitsSection benefitList={benefitList} />
+            <BenefitsSection benefits={benefits} />
             <ImprovementEstimatedGain estimatedGain={estimatedGain} />
 
         </article>
