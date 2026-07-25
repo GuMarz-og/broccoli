@@ -5,6 +5,8 @@ import ScoreSection from "../../components/ScoreSection/ScoreSection";
 import ScoreCard from "../../components/ScoreCard/ScoreCard";
 import ImprovementGrid from "../../components/ImprovementGrid/ImprovementGrid";
 import ImprovementCard from "../../components/ImprovementCard/ImprovementCard";
+import Loading from "../../components/Loading/Loading";
+import Error from "../../components/Error/Error";
 
 import "./Home.css";
 import mockAnalysis  from "../../data/mockAnalysis.json";
@@ -14,10 +16,24 @@ import { useState } from "react";
 function Home() {
 
     const [analysis, setAnalysis] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     function handleAnalyze(url) {
 
-        setAnalysis(mockAnalysis);
+        setAnalysis(null);
+        setIsLoading(true);
+        setError(null);
+
+        console.log("Analyse de :", url);
+
+        setTimeout(() => {
+
+            setAnalysis(mockAnalysis);
+
+            setIsLoading(false);
+
+        }, 1500);
 
     }
 
@@ -26,6 +42,12 @@ function Home() {
             <Container>
                 <Header />
                 <UrlForm onAnalyze={handleAnalyze} />
+                {isLoading && (
+                    <Loading />
+                )}
+                {error && (
+                    <Error />
+                )}
                 {analysis && (
                 <>
                   <ScoreSection>
