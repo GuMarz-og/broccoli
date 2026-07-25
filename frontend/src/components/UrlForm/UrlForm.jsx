@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function UrlForm() {
+function UrlForm({ onAnalyze }) {
 
     const [url, setUrl] = useState("");
 
@@ -11,7 +11,7 @@ function UrlForm() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        console.log("URL soumise :", url);
+        onAnalyze(url);
     }
 
     return (
