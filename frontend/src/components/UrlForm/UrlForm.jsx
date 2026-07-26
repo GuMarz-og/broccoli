@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./UrlForm.css";
+
 function UrlForm({ onAnalyze }) {
 
     const [url, setUrl] = useState("");
@@ -15,7 +17,7 @@ function UrlForm({ onAnalyze }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className = "url-form" onSubmit={handleSubmit}>
             <label htmlFor="url">
                 URL du site web
             </label>
