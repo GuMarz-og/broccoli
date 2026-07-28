@@ -1,3 +1,5 @@
+import "./ImprovementIndicators.css";
+
 function ImprovementIndicators({severity, priority, difficulty}) {
 
     return (

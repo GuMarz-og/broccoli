@@ -1,0 +1,12 @@
+.improvement-header {
+    text-align: center;
+    padding-bottom: var(--spacing-md);
+}
+
+.improvement-header h2{
+    font-size: var(--font-size-medium);
+}
+
+.improvement-header p{
+    font-size: var(--font-size-small);
+}

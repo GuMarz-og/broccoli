@@ -1,0 +1,21 @@
+.benefits-section {
+    display: flex;
+    flex-direction: column;
+    gap : var(--spacing-sm);
+    
+    background-color: var(--color-surface);
+    padding: 8px 16px;
+
+}
+
+.benefits-section h3{
+    text-align: center;
+    font-size: var(--font-size-small);
+}
+
+.benefits-section .benefit-item {
+    font-size: var(--font-size-small);
+
+    display: flex;
+    flex-direction: column;
+}

@@ -1,3 +1,5 @@
+import "./ImprovementEstimatedGain.css"
+
 function ImprovementEstimatedGain({estimatedGain}) {
 
     const {

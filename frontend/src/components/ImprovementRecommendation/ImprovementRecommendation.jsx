@@ -1,7 +1,9 @@
+import "./ImprovementRecommendation.css"
+
 function ImprovementRecommendation({recommendation}) {
 
     return (
-        <div className="recommendation">
+        <div className="improvement-recommendation">
 
             <h3>
                 Solution

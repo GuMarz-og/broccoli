@@ -1,0 +1,9 @@
+.improvement-indicators{
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: var(--font-size-small);
+
+    padding-bottom: var(--spacing-sm);
+}

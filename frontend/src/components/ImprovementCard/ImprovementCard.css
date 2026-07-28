@@ -1,0 +1,13 @@
+.improvement-card{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 375px;
+
+    background-color: var(--color-on-surface);
+
+    border : none;
+    border-radius: var(--radius-small);
+
+    padding: var(--spacing-md);
+}

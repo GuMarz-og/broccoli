@@ -1,0 +1,18 @@
+.estimated-gain {
+    background-color: var(--color-surface);
+    border-radius: 0 0 var(--radius-small) var(--radius-small);
+
+    padding: 8px 16px;
+
+}
+
+.estimated-gain h3{
+    font-size: var(--font-size-small);
+    text-align: center;
+
+}
+
+.estimated-gain ul{
+    font-size: var(--font-size-small);
+    padding : 8px 8px 8px 16px;
+}

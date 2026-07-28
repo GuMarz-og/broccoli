@@ -1,7 +1,9 @@
+import "./ImprovementHeader.css"
+
 function ImprovementHeader({title, description}) {
 
     return (
-        <div>
+        <div className="improvement-header">
             <h2>
                 {title}   
             </h2>

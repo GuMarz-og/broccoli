@@ -1,0 +1,23 @@
+.improvement-recommendation{
+    text-align: center;
+
+    background-color: var(--color-surface);
+    padding: 8px 16px 16px;
+
+    border-radius: var(--radius-small) var(--radius-small) 0 0 ;
+
+}
+
+.improvement-recommendation h3{
+    font-size: var(--font-size-small);
+    color: var(--color-on-primary);
+}
+
+.improvement-recommendation p{
+    font-size: var(--font-size-small);
+    color : var(--color-on-primary);
+
+    border : solid 1px var(--color-on-primary);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-sm);
+}

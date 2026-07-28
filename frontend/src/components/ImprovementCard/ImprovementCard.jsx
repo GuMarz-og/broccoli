@@ -4,6 +4,7 @@ import BenefitsSection from "../../components/BenefitsSection/BenefitsSection";
 import ImprovementEstimatedGain from "../../components/ImprovementEstimatedGain/ImprovementEstimatedGain";
 import ImprovementIndicators from "../../components/ImprovementIndicators/ImprovementIndicators";
 
+import "./ImprovementCard.css";
 
 function ImprovementCard({improvement}) {
 
@@ -17,13 +18,6 @@ function ImprovementCard({improvement}) {
         benefits,
         estimatedGain
     } = improvement;
-
-    // const benefitList = [
-    //     {label: "Accessibilité", data: benefits.accessibility},
-    //     {label: "Green IT", data: benefits.greenIT},
-    //     {label: "Performance", data: benefits.performance},
-    //     {label: "SEO",  data: benefits.seo}
-    // ];
 
     return (
         <article className="improvement-card">

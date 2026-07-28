@@ -2,14 +2,19 @@
 
     /* Couleurs */
 
-    --color-primary: #22C55E;
-    --color-secondary: #3B82F6;
+    --color-primary: #AFC3AE;
+    --color-secondary: #CEEDCD;
+    --color-tertiary: #CBE6FF;
 
-    --color-background: #F5F7FA;
+    --color-background: #AFC3AE;
     --color-surface: #FFFFFF;
+    --color-on-surface: #F4F4F4;
 
-    --color-text: #1F2937;
-    --color-muted: #6B7280;
+    --color-on-primary : #485147;
+    --color-on-secondary:#65995F;
+    --color-on-tertiary: #195B98;
+
+    --color-text: #000000;
 
     /* Bordures */
 
@@ -21,5 +26,19 @@
 
     --shadow-card:
         0 4px 12px rgba(0,0,0,0.08);
+
+    /* FontSize */
+
+    --font-size-small: 0.875rem;
+    --font-size-medium: 1.125rem;
+    --font-size-large: 1.25rem;
+
+    /* Spacing */
+    
+    --spacing-xs:4px;
+    --spacing-sm:8px;
+    --spacing-md:16px;
+    --spacing-lg:24px;
+    --spacing-xl:32px;
 
 }

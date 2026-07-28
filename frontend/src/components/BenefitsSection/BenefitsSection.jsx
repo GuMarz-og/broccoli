@@ -1,5 +1,7 @@
 import BenefitItem from "../../components/BenefitItem/BenefitItem";
 
+import "./BenefitsSection.css"
+
 
 function BenefitsSection({benefits}) {
 
